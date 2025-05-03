@@ -7,5 +7,6 @@ export default defineConfig({
   server: {
     port: process.env.PORT ? Number(process.env.PORT) : 4000,
     host: true,
+    allowedHosts: ['quiz-io-4k16.onrender.com'],
   },
 })
