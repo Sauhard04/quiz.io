@@ -90,11 +90,6 @@ const QuizPage: React.FC = () => {
   }
 
   if (showResults) {
-    const data = [
-      { name: 'Correct', value: correctAnswers },
-      { name: 'Incorrect', value: quiz.questions.length - correctAnswers },
-    ];
-
     return (
       <Container maxWidth="md" sx={{ mt: 4 }}>
         <ScoreDisplay correctAnswers={correctAnswers} totalQuestions={quiz.questions.length} />

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Typography, Box, Button, Container, Paper, useTheme } from '@mui/material';
+import { Typography, Box, Button, Container, Paper } from '@mui/material';
 import { Link } from 'react-router-dom';
 import { styled } from '@mui/material/styles';
 import { motion } from 'framer-motion';

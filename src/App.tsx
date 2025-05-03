@@ -88,7 +88,7 @@ function App() {
             <Container maxWidth="lg" sx={{ mt: 4, px: 2 }}>
               <Grid container spacing={3}>
                 {quizData.map((quiz) => (
-                  <Grid item key={quiz.id} xs={12} sm={6} md={4} sx={{ width: '100%' }}>
+                  <Grid item xs={12} sm={6} md={4} sx={{ width: '100%' }} key={quiz.id}>
                     <QuizCard quiz={quiz} />
                   </Grid>
                 ))}
