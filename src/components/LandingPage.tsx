@@ -5,7 +5,7 @@ import { styled } from '@mui/material/styles';
 import { motion } from 'framer-motion';
 
 const LandingPage: React.FC = () => {
-  const theme = useTheme();
+
   const [gradient, setGradient] = useState('45deg, #2196F3 0%, #00C853 100%');
   const [buttonColor, setButtonColor] = useState('#2196F3');
 

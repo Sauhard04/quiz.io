@@ -25,7 +25,7 @@ const QuizPage: React.FC = () => {
   const [timer, setTimer] = useState(TIMER_START);
   const navigate = useNavigate();
 
-  const [quizCompleted, setQuizCompleted] = useState(false);
+
 
   useEffect(() => {
     if (!quiz) {
@@ -33,9 +33,9 @@ const QuizPage: React.FC = () => {
       return;
     }
 
-    if (currentQuestion >= quiz.questions.length) {
-      setQuizCompleted(true);
-    }
+    // if (currentQuestion >= quiz.questions.length) {
+    //   setQuizCompleted(true);
+    // }
   }, [currentQuestion, quiz, navigate]);
 
   // Timer effect
