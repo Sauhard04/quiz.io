@@ -67,8 +67,6 @@ body {
 
 .quiz-container::before, .results-container::before, .MuiPaper-root::before {
   content: '';
-  align-items: center;
-  justify-content: center;
   position: absolute;
   top: -40%; left: -40%;
   width: 180%; height: 180%;

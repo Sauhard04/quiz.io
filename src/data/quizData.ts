@@ -1,6 +1,6 @@
-import type { Assignment } from "@/types"
+import { Quiz } from '../types/types';
 
-export const quizData: Assignment[] = [
+export const quizData: Quiz[] = [
   // Week 1
   {
         "id": "week-1",

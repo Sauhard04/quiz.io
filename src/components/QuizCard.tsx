@@ -1,5 +1,5 @@
 import React from 'react';
-import { Quiz } from '../../types/types';
+import { Quiz } from '../types/types';
 import { Card, CardContent, CardActions, Button, Typography } from '@mui/material';
 import { Link } from 'react-router-dom';
 

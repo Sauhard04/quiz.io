@@ -1,5 +1,6 @@
 import React from 'react';
-import { Container, Grid, ThemeProvider, createTheme, useMediaQuery, CssBaseline } from '@mui/material'
+import { Container, ThemeProvider, createTheme, useMediaQuery, CssBaseline } from '@mui/material'
+import Grid from '@mui/material/Grid';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import QuizCard from './components/QuizCard'
 import QuizPage from './components/QuizPage'
@@ -87,7 +88,7 @@ function App() {
             <Container maxWidth="lg" sx={{ mt: 4, px: 2 }}>
               <Grid container spacing={3}>
                 {quizData.map((quiz) => (
-                  <Grid key={quiz.id} xs={12} sm={6} md={4} sx={{ width: '100%' }}>
+                  <Grid item key={quiz.id} xs={12} sm={6} md={4} sx={{ width: '100%' }}>
                     <QuizCard quiz={quiz} />
                   </Grid>
                 ))}

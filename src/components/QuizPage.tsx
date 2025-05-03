@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
-import { Container, Paper, Typography, Box, Button, Alert } from '@mui/material';
+import { Container, Paper, Typography, Box, Button } from '@mui/material';
 import { useTheme } from '@mui/material/styles';
 import { quizData } from '../data/quizData';
 import { Quiz } from '../types/types';
@@ -13,14 +13,19 @@ const QuizPage: React.FC = () => {
   const theme = useTheme();
   const { id } = useParams<{ id: string }>();
   const quiz: Quiz | undefined = quizData.find((q) => q.id === id);
+  if (!quiz) {
+    return <Container><Paper sx={{ p: 4, mt: 8, textAlign: 'center' }}><Typography variant="h4">Quiz not found</Typography></Paper></Container>;
+  }
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [selectedAnswer, setSelectedAnswer] = useState<number | null>(null);
   const [showAnswer, setShowAnswer] = useState(false);
-  const [quizCompleted, setQuizCompleted] = useState(false);
+
   const [correctAnswers, setCorrectAnswers] = useState(0);
   const [showResults, setShowResults] = useState(false);
   const [timer, setTimer] = useState(TIMER_START);
   const navigate = useNavigate();
+
+  const [quizCompleted, setQuizCompleted] = useState(false);
 
   useEffect(() => {
     if (!quiz) {
@@ -52,6 +57,7 @@ const QuizPage: React.FC = () => {
   }, [currentQuestion, showResults, showAnswer]);
 
   // Handle when timer runs out
+  // (no changes needed here, just keeping for context)
   const handleAnswerTimeout = () => {
     if (!showResults) {
       setShowAnswer(true);
