@@ -5,6 +5,8 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import QuizCard from './components/QuizCard'
 import QuizPage from './components/QuizPage'
 import LandingPage from './components/LandingPage'
+import AIQuizPage from './components/AIQuizPage';
+import AIQuizCard from './components/AIQuizCard';
 import { quizData } from './data/quizData';
 import './App.css'
 
@@ -87,6 +89,11 @@ function App() {
           <Route path="/quizzes" element={
             <Container maxWidth="lg" sx={{ mt: 4, px: 2 }}>
               <Grid container spacing={3}>
+                {/* AI Quiz Generator Card */}
+                <Grid item xs={12} sm={6} md={4} sx={{ width: '100%' }} key="ai-quiz">
+                  <AIQuizCard />
+                </Grid>
+                {/* Existing quizzes */}
                 {quizData.map((quiz) => (
                   <Grid item xs={12} sm={6} md={4} sx={{ width: '100%' }} key={quiz.id}>
                     <QuizCard quiz={quiz} />
@@ -95,6 +102,7 @@ function App() {
               </Grid>
             </Container>
           } />
+          <Route path="/quiz/ai" element={<AIQuizPage />} />
           <Route path="/quiz/:id" element={<QuizPage />} />
         </Routes>
       </Router>

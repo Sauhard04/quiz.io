@@ -1,0 +1,35 @@
+.threed-loader {
+  perspective: 600px;
+  width: 80px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.cube {
+  width: 48px;
+  height: 48px;
+  position: relative;
+  transform-style: preserve-3d;
+  animation: spinCube 1.6s infinite linear;
+}
+.face {
+  position: absolute;
+  width: 48px;
+  height: 48px;
+  background: linear-gradient(135deg, #2196F3 40%, #00C853 100%);
+  opacity: 0.88;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+.front  { transform: rotateY(0deg) translateZ(24px); }
+.back   { transform: rotateY(180deg) translateZ(24px); }
+.right  { transform: rotateY(90deg) translateZ(24px); }
+.left   { transform: rotateY(-90deg) translateZ(24px); }
+.top    { transform: rotateX(90deg) translateZ(24px); }
+bottom { transform: rotateX(-90deg) translateZ(24px); }
+
+@keyframes spinCube {
+  0% { transform: rotateX(0deg) rotateY(0deg); }
+  100% { transform: rotateX(360deg) rotateY(360deg); }
+}

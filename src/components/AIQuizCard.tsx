@@ -1,14 +1,9 @@
 import React from 'react';
-import { Quiz } from '../types/types';
 import { Card, CardContent, CardActions, Typography } from '@mui/material';
 import AppButton from './AppButton';
 import { Link } from 'react-router-dom';
 
-interface QuizCardProps {
-  quiz: Quiz;
-}
-
-const QuizCard: React.FC<QuizCardProps> = ({ quiz }) => {
+const AIQuizCard: React.FC = () => {
   return (
     <Card 
       sx={{ 
@@ -16,10 +11,6 @@ const QuizCard: React.FC<QuizCardProps> = ({ quiz }) => {
         margin: 2,
         boxShadow: 3,
         transition: 'transform 0.2s ease-in-out',
-        display: 'flex',
-        flexDirection: 'column',
-        alignItems: 'center',
-        justifyContent: 'center',
         '&:hover': {
           transform: 'translateY(-5px)'
         }
@@ -33,27 +24,26 @@ const QuizCard: React.FC<QuizCardProps> = ({ quiz }) => {
           component="div"
           sx={{ fontWeight: 'bold' }}
         >
-          {quiz.title}
+          AI Quiz Generator
         </Typography>
         <Typography 
           variant="body2" 
-          color="text.secondary"
+          color="inherit"
           sx={{ mb: 1 }}
         >
-          <span>🎯</span>
-          {quiz.questions.length} questions
+          <span role="img" aria-label="robot">🤖</span> Generate quizzes with Gemini AI
         </Typography>
       </CardContent>
       <CardActions sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', width: '100%' }}>
         <Link 
-          to={`/quiz/${quiz.id}`} 
+          to="/quiz/ai" 
           style={{ textDecoration: 'none', color: 'inherit' }}
         >
           <AppButton 
             size="small" 
             variant="contained" 
           >
-            Start Quiz
+            Start AI Quiz
           </AppButton>
         </Link>
       </CardActions>
@@ -61,4 +51,4 @@ const QuizCard: React.FC<QuizCardProps> = ({ quiz }) => {
   );
 };
 
-export default QuizCard;
+export default AIQuizCard;
