@@ -1,54 +1,58 @@
-# React + TypeScript + Vite
+# 🧠 Quiz.io – AI Powered Quiz Platform
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+🚀 [Live Demo](https://quiz-io-4k16.onrender.com)
 
-Currently, two official plugins are available:
+Welcome to **Quiz.io**! This is a modern, interactive quiz platform that lets you:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- 📝 Take curated quizzes on various topics
+- 🤖 Generate custom AI-powered quizzes on any topic using Gemini AI
+- 📊 Instantly see your results with animated charts
+- 🎨 Enjoy a beautiful, responsive UI with 3D loading animations
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## 🌟 Features
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+- **AI Quiz Generator:** Enter any topic, and let Gemini AI create a 5-question multiple choice quiz with explanations.
+- **Info Boxes:** Each AI question comes with a short, clear info/explanation after you answer.
+- **Animated 3D Loader:** Fun 3D animation and typing effect while questions are being generated.
+- **Results Pie Chart:** See your score visualized instantly after each quiz.
+- **Consistent Design:** Unified button and card styles across all pages.
+- **Easy Navigation:** Clean, modern homepage and quiz experience.
+- **Regenerate Quizzes:** Instantly generate more questions on the same topic with one click.
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+---
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## 🖼️ Screenshots
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+### Home Page
+![Home Page](./src/assets/hom.png)
+
+### AI Quiz Page
+![Quiz Page](./src/assets/aiqz.png)
+
+---
+
+## 🌍 Try it Now!
+
+👉 **[Live Demo](https://quiz-io-4k16.onrender.com)**
+
+---
+
+## 💡 How it works
+1. Pick a topic or use the AI Quiz option.
+2. For AI quizzes, enter your topic and click Generate – watch the 3D animation!
+3. Answer questions, get instant feedback, and see explanations.
+4. View your score with a pie chart and generate more quizzes instantly.
+
+---
+
+## ✨ Tech Stack
+- React + TypeScript + Vite
+- Material UI (MUI)
+- Chart.js & react-chartjs-2
+- Gemini AI API (for AI quizzes)
+
+---
+
+Enjoy learning and challenging yourself with **Quiz.io**! 🎉
